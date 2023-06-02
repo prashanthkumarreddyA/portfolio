@@ -13,8 +13,11 @@
     .app-logo {
         width: 100px;
         flex-shrink: 0;
+        color: $white;
+        font-size: 32px;
         @include small-screen {
             width: 143px;
+            font-size: 26px;
         }
         img {
             width: 100%;
