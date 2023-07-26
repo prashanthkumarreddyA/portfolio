@@ -20,7 +20,7 @@ const Navigation = () => {
     return (
         <div className="top-navigation-bar">
             <div className="app-logo">
-               Sanket
+               Prashanth
             </div>
             <div
                 className="mobile-menu"

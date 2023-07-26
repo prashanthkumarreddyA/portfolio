@@ -15,10 +15,10 @@ const Form = () => {
 
     const onSubmit = (data) => {
         send(
-            "service_hoxjm8g", // Service ID
-            "template_he1fepk", // Template ID
+            "service_46smyji", // Service ID
+            "template_3laxg6k", // Template ID
             data,
-            "6fSWPw45CTdXVHmEU" // Public Key - https://dashboard.emailjs.com/admin/account
+            "yXqwug4gF_mDffJxS" // Public Key - https://dashboard.emailjs.com/admin/account
         )
             .then((response) => {
                 console.log("SUCCESS!", response.status, response.text);

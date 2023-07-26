@@ -48,7 +48,7 @@ const Footer = () => {
                 <SocialIcon
                         color="#E84C88"
                         icon={<FaInstagram />}
-                        link="https://www.instagram.com/sanket_patil1606/"
+                        link="https://www.instagram.com/im_prashanthreddy/"
                     />
                     <SocialIcon
                         color="#FF0000"
@@ -58,19 +58,19 @@ const Footer = () => {
                     <SocialIcon
                         color="#0D2636"
                         icon={<FaGithub />}
-                        link="https://github.com/sanketudaypatil"
+                        link="https://github.com/prashanthkumarreddya"
                     />
                     <SocialIcon
                         color="#0A66C2"
                         icon={<FaLinkedinIn />}
-                        link="https://www.linkedin.com/in/sanketudaysinhapatil"
+                        link="https://www.linkedin.com/in/prashanth-kumar-reddy-addula-656509198/"
                     />
                     
                     
                 </div>
                 <div className="bottom-bar">
                     <div className="copyright-text">
-                        Copyright 2023 Sanket Udaysinha Patil | All Rights Reserved
+                        Copyright 2023 Prashanth Kumar Reddy Addula | All Rights Reserved
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ const Showcase = ({ data, transition }) => {
                     key={project.id}
 
                 >
-                    <a  href={project.web_link}  target="_blank">
+                    <a  href={project.web_link}  target="_blank" rel="noreferrer">
                     <div className="meta-content">
                         <h3>{project.name}</h3>
                         <div className="go-to-cta">

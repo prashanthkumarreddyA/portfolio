@@ -4,7 +4,7 @@ import { AiOutlineCloudDownload } from "react-icons/ai";
 import CallToAction from "../shared/CallToAction";
 import TechIcons from "../../images/tech-icons.png";
 import Section from "../shared/section";
-
+import s from "../../download/s.pdf"
 
 import "./style.scss";
 
@@ -32,7 +32,7 @@ const Skills = () => {
                     <CallToAction
                         text="Download CV"
                         icon={<AiOutlineCloudDownload />}
-                        // action={() => window.open(Resume)}
+                         action={() => window.open(s)}
                     />
                     
                 </div>

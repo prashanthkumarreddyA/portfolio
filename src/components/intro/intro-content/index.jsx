@@ -4,8 +4,7 @@ import { FaUser } from "react-icons/fa";
 
 import girl from "../../../images/girl.png";
 import hand from "../../../images/hand.png";
-import CallToAction from "../../shared/CallToAction";
-import { scrollToSection } from "../../utils/helpers";
+
 
 import "./style.scss";
 
@@ -22,17 +21,12 @@ const IntroContent = () => {
                             </span>
                             <span className="text">, I Am</span>
                         </span>
-                        <span className="big-text">Sanket Patil</span>
+                        <span className="big-text">Prashanth Kumar Reddy Addula</span>
                     </h1>
                     <p className="title">
-                    Teaching Assistant at NxtWave | Full Stack Development Trainee | CCBPian | Frontend Developer | React JS | Express JS | Node JS | JavaScript | HTML | CSS | Bootstrap | Python | SQL |
+                    Full Stack Development Trainee | CCBPian | Frontend Developer | React JS | Express JS | Node JS | JavaScript | HTML | CSS | Bootstrap | Python | SQL |
                     </p>
-                    <CallToAction
-                        text="Contact me"
-                        action={() => {
-                            scrollToSection("contact");
-                        }}
-                    />
+                    
                 </div>
                 <div className="right-col">
                     <img

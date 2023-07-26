@@ -14,7 +14,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-7.jpg"),
         },
-        web_link: "https://sanketfoodmunch.ccbp.tech/"
+        web_link: "https://tryoutfoodmunch.ccbp.tech"
     },
     {
         id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-2.png"),
         },
-        web_link:"https://sanketwikipedia.ccbp.tech/"
+        web_link:"https://wikipediadecode.ccbp.tech"
     },
     {
         id: 3,
@@ -50,7 +50,7 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-6.png"),
         },
-        web_link:"https://jobbyappsanket.ccbp.tech/login"
+        web_link:"https://jobbyappweb.ccbp.tech"
     },
     {
         id: 6,
