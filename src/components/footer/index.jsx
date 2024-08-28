@@ -1,16 +1,10 @@
 import React from "react";
-import {
-    FaYoutube,
-    FaGithub,
-    FaLinkedinIn,
-   
-    FaInstagram,
-} from "react-icons/fa";
+import { FaGithub, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 
 import Section from "../shared/section";
 
-import SocialIcon from "./social-icon";
 import { scrollToSection } from "../utils/helpers";
+import SocialIcon from "./social-icon";
 
 import "./style.scss";
 
@@ -21,7 +15,7 @@ const Footer = () => {
             className="footer"
         >
             <div className="footer-content-wrapper">
-               <ul className="footer-menu-items">
+                <ul className="footer-menu-items">
                     <li
                         className="footer-menu-item"
                         onClick={() => scrollToSection("skills")}
@@ -34,7 +28,7 @@ const Footer = () => {
                     >
                         Portfolio
                     </li>
-                   
+
                     <li
                         className="footer-menu-item"
                         action={() => {
@@ -45,7 +39,7 @@ const Footer = () => {
                     </li>
                 </ul>
                 <div className="social-icons">
-                <SocialIcon
+                    <SocialIcon
                         color="#E84C88"
                         icon={<FaInstagram />}
                         link="https://www.instagram.com/im_prashanthreddy/"
@@ -53,7 +47,7 @@ const Footer = () => {
                     <SocialIcon
                         color="#FF0000"
                         icon={<FaYoutube />}
-                        link="https://www.youtube.com/"
+                        link="https://www.youtube.com/@prashanthkumarreddy5"
                     />
                     <SocialIcon
                         color="#0D2636"
@@ -63,14 +57,13 @@ const Footer = () => {
                     <SocialIcon
                         color="#0A66C2"
                         icon={<FaLinkedinIn />}
-                        link="https://www.linkedin.com/in/prashanth-kumar-reddy-addula-656509198/"
+                        link="https://www.linkedin.com/in/prashanth-kumar-reddy-addula/"
                     />
-                    
-                    
                 </div>
                 <div className="bottom-bar">
                     <div className="copyright-text">
-                        Copyright 2023 Prashanth Kumar Reddy Addula | All Rights Reserved
+                        Copyright 2023 Prashanth Kumar Reddy Addula | All Rights
+                        Reserved
                     </div>
                 </div>
             </div>

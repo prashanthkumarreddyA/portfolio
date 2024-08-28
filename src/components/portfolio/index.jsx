@@ -14,43 +14,43 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-7.jpg"),
         },
-        web_link: "https://tryoutfoodmunch.ccbp.tech"
+        web_link: "https://tryoutfoodmunch.ccbp.tech",
     },
     {
         id: 2,
         name: "Wikipedia Search Application",
-        tags: ["web-page","web-app", "mobile-app"],
+        tags: ["web-page", "web-app", "mobile-app"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-2.png"),
         },
-        web_link:"https://wikipediadecode.ccbp.tech"
+        web_link: "https://wikipediadecode.ccbp.tech",
     },
     {
         id: 3,
         name: "Todo Website",
-        tags: ["web-page","web-app", "mobile-app"],
+        tags: ["web-page", "web-app", "mobile-app"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-8.jpg"),
         },
-        web_link:"https://sankettodo.ccbp.tech/"
+        web_link: "https://todosdailytask.netlify.app/",
     },
     {
         id: 4,
         name: "Movix App",
-        tags: ["web-app", "mobile-app" ,"React"],
+        tags: ["web-app", "mobile-app", "React"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-1.webp"),
         },
-        web_link:"https://movix-app-mocha.vercel.app/"
+        web_link: "https://movix-app-mocha.vercel.app/",
     },
     {
         id: 5,
         name: "Jobby App",
-        tags: ["web-app", "mobile-app" ,"React"],
+        tags: ["web-app", "mobile-app", "React"],
         media: {
             thumbnail: require("../../images/portfolio/thumb-6.png"),
         },
-        web_link:"https://jobbyappweb.ccbp.tech"
+        web_link: "https://jobbyappweb.ccbp.tech",
     },
     {
         id: 6,
@@ -59,35 +59,35 @@ const projectsData = [
         media: {
             thumbnail: require("../../images/portfolio/thumb-4.jpg"),
         },
-        web_link:"https://sanketipl.ccbp.tech/"
+        web_link: "https://sanketipl.ccbp.tech/",
     },
-    {
-        id: 7,
-        name: "You Tube Clone",
-        tags: ["React", "web-app", "mobile-app"],
-        media: {
-            thumbnail: require("../../images/portfolio/thumb-3.jpg"),
-        },
-        web_link:"https://sanket-youtube-clone.netlify.app/"
-    },
-    {
-        id: 8,
-        name: "Nxt Watch",
-        tags: ["web-app", "mobile-app", "web-page"],
-        media: {
-            thumbnail: require("../../images/portfolio/thumb-5.webp"),
-        },
-        web_link:"https://nxtwatchsanket.ccbp.tech/login"
-    },
-    {
-        id: 9,
-        name: "Doctors",
-        tags: ["web-app", "mobile-app", "web-page","React"],
-        media: {
-            thumbnail: require("../../images/portfolio/thumb-9.jpg"),
-        },
-        web_link:"https://kratin-llc.vercel.app/"
-    },
+    // {
+    //     id: 7,
+    //     name: "You Tube Clone",
+    //     tags: ["React", "web-app", "mobile-app"],
+    //     media: {
+    //         thumbnail: require("../../images/portfolio/thumb-3.jpg"),
+    //     },
+    //     web_link: "https://sanket-youtube-clone.netlify.app/",
+    // },
+    // {
+    //     id: 8,
+    //     name: "Nxt Watch",
+    //     tags: ["web-app", "mobile-app", "web-page"],
+    //     media: {
+    //         thumbnail: require("../../images/portfolio/thumb-5.webp"),
+    //     },
+    //     web_link: "https://nxtwatchsanket.ccbp.tech/login",
+    // },
+    // {
+    //     id: 9,
+    //     name: "Doctors",
+    //     tags: ["web-app", "mobile-app", "web-page", "React"],
+    //     media: {
+    //         thumbnail: require("../../images/portfolio/thumb-9.jpg"),
+    //     },
+    //     web_link: "https://kratin-llc.vercel.app/",
+    // },
 ];
 
 const Portfolio = () => {
