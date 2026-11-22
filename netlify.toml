@@ -1,0 +1,37 @@
+# Netlify build & deploy configuration
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "22"
+
+# Single-page portfolio: sections are reached with #anchors, so no SPA rewrite is needed.
+# Unknown paths fall through to public/404.html (served with a real 404 status).
+
+# Old CRA entry points / resume links -> new resume
+[[redirects]]
+  from = "/resume"
+  to = "/Prashanth_Kumar_Reddy_Resume.pdf"
+  status = 301
+
+# Long-term caching for fingerprinted build assets
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/Prashanth_Kumar_Reddy_Resume.pdf"
+  [headers.values]
+    Content-Type = "application/pdf"
+    Content-Disposition = "attachment; filename=\"Prashanth_Kumar_Reddy_Resume.pdf\""
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
