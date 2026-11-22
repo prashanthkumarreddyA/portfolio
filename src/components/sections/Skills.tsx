@@ -17,9 +17,9 @@ export function Skills() {
                             key={title}
                             delay={(i % 4) * 70}
                         >
-                            <article className="card h-full p-6 transition-colors duration-300 hover:border-line-strong">
+                            <article className="card card-hover h-full p-6">
                                 <header className="mb-5 flex items-center gap-3">
-                                    <span className="grid size-10 place-items-center rounded-lg bg-accent/10 text-accent">
+                                    <span className="grid size-10 place-items-center rounded-lg bg-accent-soft text-accent">
                                         <CategoryIcon
                                             size={20}
                                             aria-hidden="true"
@@ -44,7 +44,7 @@ export function Skills() {
                                             ) : (
                                                 <span
                                                     aria-hidden="true"
-                                                    className="size-1.5 rounded-full bg-accent/70"
+                                                    className="size-1.5 rounded-full bg-accent-2"
                                                 />
                                             )}
                                             {name}

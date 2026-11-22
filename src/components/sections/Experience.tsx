@@ -37,8 +37,8 @@ export function Experience() {
                             aria-hidden="true"
                             className={`absolute top-0 left-0 grid size-10 place-items-center rounded-full border sm:size-12 ${
                                 job.current
-                                    ? "border-accent bg-accent text-accent-ink"
-                                    : "border-line-strong bg-surface text-muted"
+                                    ? "border-accent bg-accent text-accent-ink shadow-[0_0_0_6px_rgb(79_70_229/0.12)]"
+                                    : "border-accent/25 bg-accent-soft text-accent"
                             }`}
                         >
                             <LuBriefcase size={18} />
@@ -80,7 +80,7 @@ function ExperienceCard({ job }: { job: ExperienceItem }) {
                         />
                         <time>{job.start}</time> – <time>{job.end}</time>
                         {job.current && (
-                            <span className="ml-1 rounded-full bg-emerald-400/10 px-2 py-0.5 text-xs font-medium text-emerald-300">
+                            <span className="ml-1 rounded-full bg-accent-2-soft px-2 py-0.5 text-xs font-medium text-accent-2 ring-1 ring-accent-2/20">
                                 Current
                             </span>
                         )}
@@ -106,7 +106,9 @@ function ExperienceCard({ job }: { job: ExperienceItem }) {
                         className="flex min-w-[8.5rem] flex-col-reverse rounded-xl border border-line bg-surface-2 px-4 py-3"
                     >
                         <dt className="text-xs text-muted">{h.label}</dt>
-                        <dd className="text-xl font-bold text-fg">{h.value}</dd>
+                        <dd className="text-xl font-bold text-accent">
+                            {h.value}
+                        </dd>
                     </div>
                 ))}
             </dl>

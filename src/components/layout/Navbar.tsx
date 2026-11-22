@@ -36,9 +36,9 @@ export function Navbar() {
             <header
                 className={`fixed inset-x-0 top-0 z-50 transition-[background-color,border-color] duration-300 ${
                     open
-                        ? "border-b border-line bg-ink"
+                        ? "border-b border-line bg-surface"
                         : scrolled
-                          ? "border-b border-line bg-ink/85 backdrop-blur-md"
+                          ? "border-b border-line bg-surface/85 shadow-[0_1px_12px_-4px_rgb(15_23_42/0.08)] backdrop-blur-md"
                           : "border-b border-transparent"
                 }`}
             >
@@ -117,7 +117,7 @@ export function Navbar() {
             <div
                 id="mobile-menu"
                 hidden={!open}
-                className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-ink md:hidden"
+                className="fixed inset-x-0 top-16 bottom-0 z-40 overflow-y-auto bg-surface md:hidden"
             >
                 <ul className="container-page flex flex-col gap-1 pt-6">
                     {navItems.map((item) => (

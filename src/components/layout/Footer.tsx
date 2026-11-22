@@ -21,21 +21,21 @@ const footerLinks = [
 export function Footer() {
     const year = new Date().getFullYear();
     return (
-        <footer className="border-t border-line bg-ink">
+        <footer className="bg-navy text-on-navy [&_:focus-visible]:outline-white">
             <div className="container-page flex flex-col items-center gap-8 py-12 text-center">
                 <a
                     href="#top"
-                    className="text-xl font-bold tracking-tight"
+                    className="text-xl font-bold tracking-tight text-white"
                 >
-                    Prashanth<span className="text-accent">.</span>
+                    Prashanth<span className="text-[#a5b4fc]">.</span>
                 </a>
                 <nav aria-label="Footer">
-                    <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px] text-muted">
+                    <ul className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-[15px] text-on-navy">
                         {navItems.map((item) => (
                             <li key={item.id}>
                                 <a
                                     href={`#${item.id}`}
-                                    className="transition-colors hover:text-fg"
+                                    className="transition-colors hover:text-white"
                                 >
                                     {item.label}
                                 </a>
@@ -46,10 +46,11 @@ export function Footer() {
                 <SocialLinks
                     links={footerLinks}
                     size="sm"
+                    tone="dark"
                 />
             </div>
-            <div className="border-t border-line">
-                <p className="container-page py-6 text-center text-sm text-subtle">
+            <div className="border-t border-white/10">
+                <p className="container-page py-6 text-center text-sm text-on-navy-muted">
                     © {year} {profile.fullName}. All rights reserved.
                 </p>
             </div>

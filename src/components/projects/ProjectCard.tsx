@@ -17,8 +17,8 @@ export function ProjectCard({ project }: { project: PersonalProject }) {
     } = project;
 
     return (
-        <article className="group card flex h-full flex-col overflow-hidden transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:border-line-strong">
-            <div className="relative aspect-[16/10] overflow-hidden border-b border-line bg-surface-2">
+        <article className="group card card-hover flex h-full flex-col overflow-hidden hover:-translate-y-1">
+            <div className="relative aspect-video overflow-hidden border-b border-line bg-surface-2">
                 {image ? (
                     <img
                         src={image.src}
@@ -26,7 +26,7 @@ export function ProjectCard({ project }: { project: PersonalProject }) {
                         sizes="(min-width: 1024px) 360px, (min-width: 640px) 50vw, 100vw"
                         alt={image.alt}
                         width={960}
-                        height={600}
+                        height={540}
                         loading="lazy"
                         decoding="async"
                         className="size-full object-cover object-top transition-transform duration-500 group-hover:scale-[1.04]"
@@ -38,19 +38,16 @@ export function ProjectCard({ project }: { project: PersonalProject }) {
                 ) : (
                     <ResumePlaceholder />
                 )}
-                {(project.featured || status) && (
-                    <div className="absolute top-3 left-3 flex flex-wrap gap-2">
-                        {project.featured && (
-                            <span className="rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-ink">
-                                Featured
-                            </span>
-                        )}
-                        {status && (
-                            <span className="rounded-full border border-accent/40 bg-ink/80 px-3 py-1 text-xs font-medium text-accent backdrop-blur">
-                                {status}
-                            </span>
-                        )}
-                    </div>
+                {/* Featured sits top-right so it doesn't cover titles in custom thumbnails */}
+                {project.featured && (
+                    <span className="absolute top-3 right-3 rounded-full bg-accent px-3 py-1 text-xs font-semibold text-accent-ink shadow-sm">
+                        Featured
+                    </span>
+                )}
+                {status && (
+                    <span className="absolute top-3 left-3 rounded-full border border-line bg-surface/95 px-3 py-1 text-xs font-medium text-fg shadow-sm backdrop-blur">
+                        {status}
+                    </span>
                 )}
             </div>
 
@@ -65,7 +62,7 @@ export function ProjectCard({ project }: { project: PersonalProject }) {
                     {features.map((f) => (
                         <li
                             key={f}
-                            className="text-sm text-muted before:mr-2 before:text-accent before:content-['→']"
+                            className="text-sm text-muted before:mr-2 before:text-accent-2 before:content-['→']"
                         >
                             {f}
                         </li>
@@ -121,7 +118,7 @@ export function ProjectCard({ project }: { project: PersonalProject }) {
 }
 
 const placeholderBg =
-    "relative grid size-full place-items-center bg-[radial-gradient(circle_at_70%_20%,rgb(255_219_68/0.14),transparent_55%)]";
+    "relative grid size-full place-items-center bg-[radial-gradient(circle_at_70%_20%,rgb(79_70_229/0.12),transparent_55%)]";
 
 /** Abstract 5×5 board for the Bingo project (no live deployment to screenshot). */
 const BINGO_MARKED = new Set([0, 6, 12, 18, 24, 2, 7, 17, 22, 10, 11, 13]);
@@ -131,7 +128,7 @@ function BingoPlaceholder() {
             aria-hidden="true"
             className={placeholderBg}
         >
-            <div className="grid w-[44%] rotate-[-4deg] grid-cols-5 gap-1.5 rounded-lg border border-line-strong bg-surface p-3 shadow-xl shadow-black/40 transition-transform duration-500 group-hover:rotate-0">
+            <div className="grid w-[44%] rotate-[-4deg] grid-cols-5 gap-1.5 rounded-lg border border-line-strong bg-surface p-3 shadow-xl shadow-slate-900/10 transition-transform duration-500 group-hover:rotate-0">
                 {Array.from({ length: 25 }, (_, i) => (
                     <span
                         key={i}
@@ -156,7 +153,7 @@ function MobilePlaceholder() {
             aria-hidden="true"
             className={placeholderBg}
         >
-            <div className="flex h-[78%] aspect-9/17 rotate-[-4deg] flex-col rounded-[1.1rem] border-2 border-line-strong bg-surface p-3 shadow-xl shadow-black/40 transition-transform duration-500 group-hover:rotate-0">
+            <div className="flex h-[78%] aspect-9/17 rotate-[-4deg] flex-col rounded-[1.1rem] border-2 border-line-strong bg-surface p-3 shadow-xl shadow-slate-900/10 transition-transform duration-500 group-hover:rotate-0">
                 <span className="mx-auto h-1 w-1/3 rounded-full bg-fg/20" />
                 <span className="mt-4 h-2 w-1/2 rounded bg-fg/70" />
                 <span className="mt-3 h-4 w-full rounded border border-line-strong" />
@@ -175,7 +172,7 @@ function ResumePlaceholder() {
             aria-hidden="true"
             className={placeholderBg}
         >
-            <div className="w-[52%] rotate-[-4deg] rounded-lg border border-line-strong bg-surface p-4 shadow-xl shadow-black/40 transition-transform duration-500 group-hover:rotate-0">
+            <div className="w-[52%] rotate-[-4deg] rounded-lg border border-line-strong bg-surface p-4 shadow-xl shadow-slate-900/10 transition-transform duration-500 group-hover:rotate-0">
                 <div className="flex items-center gap-2">
                     <LuFileText
                         className="text-accent"

@@ -110,7 +110,7 @@ export function Projects() {
 
 function ProfessionalCard({ project }: { project: ProfessionalProject }) {
     return (
-        <article className="card flex h-full flex-col p-6 transition-colors duration-300 hover:border-line-strong">
+        <article className="card card-hover flex h-full flex-col p-6">
             <p className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-subtle">
                 <span className="font-mono tracking-wider text-accent uppercase">
                     {project.type}
@@ -155,7 +155,7 @@ function ProfessionalCard({ project }: { project: ProfessionalProject }) {
                 {project.features.map((f) => (
                     <li
                         key={f}
-                        className="text-sm text-muted before:mr-2 before:text-accent before:content-['→']"
+                        className="text-sm text-muted before:mr-2 before:text-accent-2 before:content-['→']"
                     >
                         {f}
                     </li>

@@ -72,6 +72,22 @@ describe("App", () => {
         ).toBeInTheDocument();
     });
 
+    it.each([
+        [/AI Resume Builder/, "careercraft-ai"],
+        ["Real-time Bingo", "realtime-bingo"],
+        ["React Native Authentication", "react-native-auth"],
+    ])("shows the custom thumbnail for %s", (name, file) => {
+        render(<App />);
+        const card = screen.getByRole("heading", { name }).closest("article")!;
+        const image = within(card).getByRole("img");
+        expect(image).toHaveAttribute("src", `/images/${file}.png`);
+        expect(image.getAttribute("srcset")).toContain(
+            `/images/${file}-960.webp 960w`
+        );
+        expect(image).toHaveAttribute("loading", "lazy");
+        expect(image.getAttribute("alt")).toMatch(/^Illustration of /);
+    });
+
     it("does not render projects with unconfirmed ownership", () => {
         render(<App />);
         expect(

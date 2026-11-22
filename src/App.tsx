@@ -33,7 +33,7 @@ export default function App() {
             <Footer />
             <ToastContainer
                 position="bottom-right"
-                theme="dark"
+                theme="light"
                 autoClose={5000}
             />
         </>

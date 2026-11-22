@@ -19,7 +19,7 @@ export function Education() {
                         delay={i * 80}
                     >
                         <article className="card flex h-full gap-4 p-6">
-                            <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-accent/10 text-accent">
+                            <span className="grid size-11 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent">
                                 <LuGraduationCap
                                     size={22}
                                     aria-hidden="true"

@@ -51,7 +51,7 @@ export function Contact() {
                             ({ label, value, href, icon: Icon, external }) => {
                                 const content = (
                                     <>
-                                        <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-surface-2 text-accent">
+                                        <span className="grid size-10 shrink-0 place-items-center rounded-lg bg-accent-soft text-accent">
                                             <Icon
                                                 size={17}
                                                 aria-hidden="true"

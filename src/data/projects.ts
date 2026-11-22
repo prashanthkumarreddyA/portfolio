@@ -20,6 +20,17 @@ const img = (small: string, large: string, alt: string): ProjectImage => ({
 });
 
 /**
+ * Custom thumbnails stored in public/images/<name>.png (original artwork).
+ * Optimised 16:9 WebP copies (<name>-480.webp / <name>-960.webp) are served via srcSet;
+ * the PNG remains the fallback src.
+ */
+const publicImg = (name: string, alt: string): ProjectImage => ({
+    src: `/images/${name}.png`,
+    srcSet: `/images/${name}-480.webp 480w, /images/${name}-960.webp 960w`,
+    alt,
+});
+
+/**
  * Professional projects. Source: resume "Projects" + "Professional Experience".
  * No client names, source code, customer data or internal business details are shown.
  */
@@ -139,6 +150,10 @@ export const personalProjects: PersonalProject[] = [
         ],
         categories: ["ai", "react"],
         visual: "resume",
+        image: publicImg(
+            "careercraft-ai",
+            "Illustration of the CareerCraft AI dashboard with AI resume tailoring, job match score, claim checker and application Kanban board"
+        ),
         liveUrl: "https://careercraft-ai-dash.netlify.app/login",
         githubUrl: "https://github.com/prashanthkumarreddyA/CareerCraft-AI",
         featured: true,
@@ -158,6 +173,10 @@ export const personalProjects: PersonalProject[] = [
         stack: ["React", "Socket.io", "Node.js", "Express"],
         categories: ["react"],
         visual: "bingo",
+        image: publicImg(
+            "realtime-bingo",
+            "Illustration of a multiplayer Bingo game board with called numbers and a list of connected players"
+        ),
         githubUrl: "https://github.com/prashanthkumarreddyA/socket-bingo-game",
     },
     {
@@ -175,6 +194,10 @@ export const personalProjects: PersonalProject[] = [
         stack: ["React Native", "TypeScript", "Appwrite", "React Navigation"],
         categories: ["react"],
         visual: "mobile",
+        image: publicImg(
+            "react-native-auth",
+            "Illustration of React Native login and sign-up screens connected to a cloud authentication backend"
+        ),
         githubUrl:
             "https://github.com/prashanthkumarreddyA/react-native-auth-app-write",
     },

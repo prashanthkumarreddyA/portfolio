@@ -17,7 +17,7 @@ export interface ContactFormValues {
 }
 
 const inputClass =
-    "w-full rounded-lg border border-line-strong bg-surface px-4 py-3 text-[15px] text-fg placeholder:text-subtle outline-none transition-colors focus:border-accent aria-[invalid=true]:border-red-400";
+    "w-full rounded-lg border border-field bg-surface px-4 py-3 text-[15px] text-fg placeholder:text-subtle outline-none transition-[border-color,box-shadow] focus:border-accent focus:ring-4 focus:ring-accent/15 aria-[invalid=true]:border-red-600";
 
 export function ContactForm() {
     const {
@@ -222,7 +222,7 @@ function Field({ id, label, error, full, children }: FieldProps) {
                 <p
                     id={`${id}-error`}
                     role="alert"
-                    className="mt-1.5 text-sm text-red-300"
+                    className="mt-1.5 text-sm text-red-600"
                 >
                     {error}
                 </p>
