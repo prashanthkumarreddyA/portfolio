@@ -35,19 +35,19 @@ export const profile = {
     ],
 
     journey: [
-        { period: "2017 – 2020", text: "B.E. in Mechanical Engineering" },
         {
-            period: "2022 – 2023",
-            text: "Industry Ready Certification in Full Stack Development",
+            period: "2025 – Now",
+            text: "Full Stack Developer at ITRadiant Solutions",
         },
         {
             period: "2023 – 2025",
             text: "Software Engineer at Labyrinth Global Solutions",
         },
         {
-            period: "2025 – Now",
-            text: "Full Stack Developer at ITRadiant Solutions",
+            period: "2022 – 2023",
+            text: "Industry Ready Certification in Full Stack Development",
         },
+        { period: "2017 – 2020", text: "B.E. in Mechanical Engineering" },
     ],
 
     stats: [

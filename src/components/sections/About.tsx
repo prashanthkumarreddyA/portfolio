@@ -30,7 +30,7 @@ export function About() {
                                 <span
                                     aria-hidden="true"
                                     className={`absolute top-1.5 -left-[1.95rem] size-3 rounded-full border-2 ${
-                                        i === profile.journey.length - 1
+                                        i === 0
                                             ? "border-accent bg-accent"
                                             : "border-line-strong bg-ink-2"
                                     }`}
